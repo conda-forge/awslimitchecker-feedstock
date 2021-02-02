@@ -13,7 +13,7 @@ source:
 build:
   entry_points:
     - awslimitchecker = awslimitchecker.runner:console_entry_point
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -43,7 +43,7 @@ test:
 about:
   home: https://github.com/jantman/awslimitchecker
   summary: A script and python module to check your AWS service limits and usage, and warn when usage approaches limits.
-  license: AGPL-3.0-only
+  license: AGPL-3.0-or-later
   license_file: LICENSE
   doc_url: https://github.com/jantman/awslimitchecker
   dev_url: https://github.com/jantman/awslimitchecker
