@@ -3,7 +3,7 @@ About awslimitchecker
 
 Home: https://github.com/jantman/awslimitchecker
 
-Package license: AGPL-3.0-or-later
+Package license: AGPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/awslimitchecker-feedstock/blob/master/LICENSE.txt)
 
