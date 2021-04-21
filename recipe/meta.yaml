@@ -1,5 +1,5 @@
 {% set name = "awslimitchecker" %}
-{% set version = "10.0.0" %}
+{% set version = "11.0.0" %}
 
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7610ac0fbe0817754e238099053a4ff4d3ea5260676094af86331891d6934a09
+  sha256: 08e53145f44c6689076de7b98ba5fd40b654f11cf2724ef46db17a1df9c78af9
 
 build:
   entry_points:
     - awslimitchecker = awslimitchecker.runner:console_entry_point
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
