@@ -1,5 +1,5 @@
 {% set name = "awslimitchecker" %}
-{% set version = "11.0.0" %}
+{% set version = "12.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 08e53145f44c6689076de7b98ba5fd40b654f11cf2724ef46db17a1df9c78af9
+  sha256: adfd2bb2b971609a5ef35a50a037336ca82e9fd64ae6a25a0647c7bb802d9a65
 
 build:
   entry_points:
