@@ -7,24 +7,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: adfd2bb2b971609a5ef35a50a037336ca82e9fd64ae6a25a0647c7bb802d9a65
 
 build:
   entry_points:
     - awslimitchecker = awslimitchecker.runner:console_entry_point
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - boto3 >=1.9.175
     - botocore
-    - python >=3.5
+    - python >={{ python_min }}
     - python-dateutil
     - pytz
     - termcolor >=1.1.0
@@ -39,6 +39,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jantman/awslimitchecker
